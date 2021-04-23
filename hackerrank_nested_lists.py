@@ -16,10 +16,11 @@ def creating_catalog():
 
 def ordering_students(list_students):
     list_grades.sort()
+    final_grades = list(dict.fromkeys(list_grades))
     result = []
     sorted_list = []
     for i in list_students:
-        if i[1] == list_grades[1]:
+        if i[1] == final_grades[1]:
             result.append(i[0])
         sorted_list = sorted(result, key=str.lower)
     return sorted_list
