@@ -1,7 +1,6 @@
 n = int(input("Nr of students: "))
 list_nest = []
 list_grades = []
-result = []
 
 
 def creating_catalog():
@@ -17,6 +16,7 @@ def creating_catalog():
 
 def ordering_students(list_students):
     list_grades.sort()
+    result = []
     sorted_list = []
     for i in list_students:
         if i[1] == list_grades[1]:
